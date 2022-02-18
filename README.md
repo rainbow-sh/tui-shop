@@ -51,6 +51,12 @@ And that's it! The last time you'll have to install a TUI/CLI manualy (at least 
 
 Yes, but why would y-
 
+## Usage
+
+`sudo tui-shop`
+
+You need sudo privileges, sorry.
+
 ## Remove
 
 `sudo rm /usr/bin/tui-shop`
