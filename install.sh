@@ -8,6 +8,6 @@ chmod +x /usr/bin/tui-shop # Make install file executable
 
 echo "Cleaning up..."
 cd ../ # Cd out of the directory
-rm -r tui-shop
+rm -r tui-shop # Clean up
 
 echo "Done!"
