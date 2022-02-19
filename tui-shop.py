@@ -59,9 +59,7 @@ def download(name:str):
 
     # Dependencies
     for dep in apps[name]["dependencies"]: # For each dependency
-        if system(f'apt -y install {dep} || pacman -Syu --noconfirm {dep} || dnf -y install {dep} || zypper -n {dep} || nix {dep}') != 0:
-            print("\u001b[1m\u001b[31mYOUR DISTRO ISN'T SUPPORTED\u001b[0m") # If package manager not found
-            quit(1) # Quit with error
+        system(f'apt -y install {dep} || pacman -Syu --noconfirm {dep} || dnf -y install {dep} || zypper -n {dep} || nix {dep}') # Download it
     print() # Linebreak
     # Clone repo
     if apps[name]['repo']:
