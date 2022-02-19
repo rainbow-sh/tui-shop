@@ -55,7 +55,7 @@ Yes, but why would y-
 
 `sudo tui-shop`
 
-You need sudo privileges, sorry.
+You NEED sudo privileges.
 
 ## Remove
 
@@ -75,7 +75,7 @@ Linux. If you can port it, please open up a PR.
 
 ## Requirements
 
-python3 and python3-pip
+git, python3 and python3-pip
 
 ## That's it
 
