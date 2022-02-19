@@ -68,7 +68,7 @@ def download(name:str):
         print() # Linebreak
 
     # Check if installed successfully
-    if system('; '.join([f'cd {FILEPATH}/tmp'] + apps[name]['actions']['install'])) == 0:
+    if system(' && '.join([f'cd {FILEPATH}/tmp'] + apps[name]['actions']['install'])) == 0:
         # Add app to installed
         with open(FILEPATH + '/installed.json', 'w') as f:
             if name not in install: install.append(name) # If not updating
