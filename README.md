@@ -17,7 +17,7 @@
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![spaghetti](https://img.shields.io/badge/MmMmMmM-spaghetti%20code-yellow)](https://img.shields.io/badge/MmMmMmM-spaghetti%20code-yellow)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://https://www.buymeacoffee.com/Gcat101)
+[![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/Gcat101)
 [![Whoooops](https://img.shields.io/badge/Whooops!-All%20badges!-red)](https://img.shields.io/badge/Whooops!-All%20badges!-red)
 
 Something between a GUI and a CLI way of downloading apps.
