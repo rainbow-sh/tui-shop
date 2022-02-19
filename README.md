@@ -13,6 +13,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
+[![tui-store-logo](https://img.shields.io/badge/-%20-lightgrey?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAxklEQVRoge3Zuw3CMBRGYYzoGYEhIrEGSLTswCywQ0pGyRKMQEthRvCPFF7H56uvnBy5uUrKIlRrrenst5RSSmtm+YkX+SUG0xlMZzCdwXSrdxyabDyvmHPL6+6GDaYzmM5gOoPpyj98q5pTdzdsMJ3BdAbTGUwXf9M6nm7xoeNlE82lS951GKK5wzQ1Z7q7YYPpDKYzmM5gunjTWu938aH1nG1Q6U/Gx30bP7uluxs2mM5gOoPpDKbz7yGdwXQG0xlMZzDdE3J4HtdWbCB+AAAAAElFTkSuQmCC)](https://github.com/Gcat101/Tui-shop)
 
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![spaghetti](https://img.shields.io/badge/MmMmMmM-spaghetti%20code-yellow)](https://img.shields.io/badge/MmMmMmM-spaghetti%20code-yellow)
