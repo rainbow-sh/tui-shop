@@ -105,6 +105,7 @@ def remove(name:str):
 
     # If not
     else:
+        rmtree(FILEPATH + '/tmp') # Remove tmp directory
         input('\n\u001b[1m\u001b[31mProcess failed (press enter)\u001b[0m') # Warning
 
 # Generate download page
