@@ -303,7 +303,7 @@ installscreen = urwid.Pile((
     urwid.Pile((
         urwid.Text(('bold', 'INSTALLED'), align=urwid.CENTER), # Title
         LINEBREAK,
-        urwid.Pile([urwid.Button(('inv', f'{i[0] + 1}. {i[1]}'), on_press=page_gen(i[1])) for i in enumerate(install)]) # App list
+        urwid.Pile([urwid.Button(('inv', f'{i[0] + 1}. {i[1]}'), on_press=page_gen(i[1])) for i in enumerate(sorted(install))]) # App list
     ))
 ))
 # About screen
