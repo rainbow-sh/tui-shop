@@ -9,7 +9,7 @@ from json import load, dump, loads # Json
 from random import choice # Used for random app and splashes
 from github import Github, GithubException # Github support
 from thefuzz import process # Fuzzy search
-from requests.exceptions import ConnectionError # For low internet error
+from requests.exceptions import ConnectionError, ReadTimeout # For low internet error
 
 # CONSTANT PATHS
 FILEPATH = '/opt/tui-shop'
@@ -223,7 +223,7 @@ try: apps = {i.name.replace('.json', '').replace('_', ' '):loads(i.decoded_conte
 except GithubException: # If github token invalid
     print(f'\u001b[1m\u001b[31mPUT A VALID GITHUB TOKEN IN THE CONFIG ({FILEPATH}/config.json)\u001b[0m')
     exit(1) # Quit with error
-except ConnectionError:
+except (ConnectionError, ReadTimeout):
     print(f'\u001b[1m\u001b[31mLOW INTERNET CONNECTION\u001b[0m')
     exit(1) # Quit with error
 
