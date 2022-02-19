@@ -58,7 +58,7 @@ def download(name:str):
     clear_screen() # Clear 
 
     # Dependencies
-    if system(f'apt -y install {" ".join(apps[name]["dependencies"])} || pacman -Syu --noconfirm {" ".join(apps[name]["dependencies"])} || yum -y install {" ".join(apps[name]["dependencies"])} || zypper -n {" ".join(apps[name]["dependencies"])} || nix {" ".join(apps[name]["dependencies"])}') != 0:
+    if system(f'apt -y install {" ".join(apps[name]["dependencies"])} || pacman -Syu --noconfirm {" ".join(apps[name]["dependencies"])} || dnf -y install {" ".join(apps[name]["dependencies"])} || zypper -n {" ".join(apps[name]["dependencies"])} || nix {" ".join(apps[name]["dependencies"])}') != 0:
         print("\u001b[1m\u001b[31mYOUR DISTRO ISN'T SUPPORTED\u001b[0m") # If package manager not found
         quit(1) # Quit with error
     print() # Linebreak
