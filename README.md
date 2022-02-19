@@ -20,6 +20,8 @@
 [![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://https://www.buymeacoffee.com/Gcat101)
 [![Whoooops](https://img.shields.io/badge/Whooops!-All%20badges!-red)](https://img.shields.io/badge/Whooops!-All%20badges!-red)
 
+Something between a GUI and a CLI way of downloading apps.
+
 ## Description
 
 You know how hard it can be to install CLIs/TUIs, you have to:
