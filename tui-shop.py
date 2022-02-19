@@ -198,7 +198,7 @@ def gen_search(_):
             LINEBREAK,
 
             # App list
-            urwid.Pile([urwid.Button(('inv', f'{i[0] + 1}. {i[1][0]}'), on_press=page_gen(i[1][0])) for i in enumerate(process.extract(q, apps.keys(), limit=5))])
+            urwid.Pile([urwid.Button(('inv', f'{i[0] + 1}. {i[1][0]}'), on_press=page_gen(i[1][0])) for i in enumerate(process.extract(q, apps.keys(), limit=5) if q else apps.keys())])
         ))
     ))
 
@@ -286,7 +286,7 @@ mainscreen = urwid.Pile((
         ))
     ))
 ))
-# Serch screen
+# Standard search screen
 listscreen = urwid.Pile((
     BAR,
     LINEBREAK,
