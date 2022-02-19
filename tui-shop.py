@@ -75,12 +75,12 @@ def download(name:str):
             dump(install, f) # Dump to file
         rmtree(FILEPATH + '/tmp') # Remove tmp directory
 
-        input('\nP\u001b[1mress enter to continue...\u001b[0m') # Click to continue
+        input('\nP\u001b[1mPress enter to continue...\u001b[0m') # Click to continue
         update_installed(name) # Update install dict
 
     # If not
     else:
-        input('\n\u001b[1m\u001b[31mProcess failed\u001b[0m') # Warning
+        input('\n\u001b[1m\u001b[31mProcess failed (press enter)\u001b[0m') # Warning
 
 # Remove app 
 def remove(name:str):
@@ -105,7 +105,7 @@ def remove(name:str):
 
     # If not
     else:
-        input('\n\u001b[1m\u001b[31mProcess failed\u001b[0m') # Warning
+        input('\n\u001b[1m\u001b[31mProcess failed (press enter)\u001b[0m') # Warning
 
 # Generate download page
 def page_gen(name:str): 
