@@ -48,6 +48,20 @@ chmod +x ./install.sh
 sudo ./install.sh
 ```
 
+After that, go into /opt/tui-shop/config.json and paste your github key.
+
+To get a github key you need to:
+
+1. Login into github,
+
+2. Go to account settings;
+
+3. Go to developer settings,
+
+4. Go to keys,
+
+5. Create an infinite key with no permissions:
+
 And that's it! The last time you'll have to install a TUI/CLI manualy (at least i hope so)
 
 ### Can you install tui-shop with tui-shop tho
