@@ -66,16 +66,21 @@ def download(name:str):
     if apps[name]['repo']:
         system(f'git clone https://github.com/{apps[name]["repo"]}.git {FILEPATH}/tmp')
         print() # Linebreak
-    system('; '.join([f'cd {FILEPATH}/tmp'] + apps[name]['actions']['install'])) # Install action
 
-    # Add app to installed
-    with open(FILEPATH + '/installed.json', 'w') as f:
-        if name not in install: install.append(name) # If not updating
-        dump(install, f) # Dump to file
-    rmtree(FILEPATH + '/tmp') # Remove tmp directory
+    # Check if installed successfully
+    if system('; '.join([f'cd {FILEPATH}/tmp'] + apps[name]['actions']['install'])) == 0:
+        # Add app to installed
+        with open(FILEPATH + '/installed.json', 'w') as f:
+            if name not in install: install.append(name) # If not updating
+            dump(install, f) # Dump to file
+        rmtree(FILEPATH + '/tmp') # Remove tmp directory
 
-    input('\nP\u001b[1mress enter to continue...\u001b[0m') # Click to continue
-    update_installed(name) # Update install dict
+        input('\nP\u001b[1mress enter to continue...\u001b[0m') # Click to continue
+        update_installed(name) # Update install dict
+
+    # If not
+    else:
+        input('\n\u001b[1m\u001b[31mProcess failed\u001b[0m') # Warning
 
 # Remove app 
 def remove(name:str):
@@ -86,16 +91,21 @@ def remove(name:str):
     # Clone repo
     system(f'git clone https://github.com/{apps[name]["repo"]}.git {FILEPATH}/tmp')
     print() # Linebreak
-    system('; '.join([f'cd {FILEPATH}/tmp'] + apps[name]['actions']['remove']))
     
-    # Remove app from installed
-    with open(FILEPATH + '/installed.json', 'w') as f:
-        install.remove(name)
-        dump(install, f)
-    rmtree(FILEPATH + '/tmp') # Remove tmp directory
+    # Check if removed successfully
+    if system(' && '.join([f'cd {FILEPATH}/tmp'] + apps[name]['actions']['remove'])) == 0:
+        # Remove app from installed
+        with open(FILEPATH + '/installed.json', 'w') as f:
+            install.remove(name)
+            dump(install, f)
+        rmtree(FILEPATH + '/tmp') # Remove tmp directory
 
-    input('\n\u001b[1mPress enter to continue...\u001b[0m') # Click to continue
-    update_installed(name) # Update install dict
+        input('\n\u001b[1mPress enter to continue...\u001b[0m') # Click to continue
+        update_installed(name) # Update install dict
+
+    # If not
+    else:
+        input('\n\u001b[1m\u001b[31mProcess failed\u001b[0m') # Warning
 
 # Generate download page
 def page_gen(name:str): 
