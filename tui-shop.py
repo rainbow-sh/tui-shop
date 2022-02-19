@@ -370,12 +370,10 @@ if __name__=='__main__':
     # If root
     if geteuid()==0:
             try: loop.run() # Run loop
-            except KeyboardInterrupt: loop.stop() # Stop loop on ctrl+c
-            except AttributeError: change_screen('mainscreen') # Idk why this bug happends but it just returns you to the main screen
+            except KeyboardInterrupt: quit(0) # Quit on ctrl+c
+            except AttributeError: quit(1) # Idk why this bug happends but it just quits with error
     else: # If not root
         print('\u001b[1m\u001b[31mRUN AS ROOT\u001b[0m')
         quit(1) # Quit with error
-    
-    quit(0) # Quit without error
 
 # THE END
