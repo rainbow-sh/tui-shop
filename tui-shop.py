@@ -30,7 +30,7 @@ def update_installed(name:str):
     install = load(open(FILEPATH + '/installed.json')) # Get install dict from file
     # Update installed screen
     installscreen[2].widget_list.pop()
-    installscreen[2].widget_list.append(urwid.Pile([urwid.Button(('inv', f'{i[0] + 1}. {i[1]}'), on_press=page_gen(i[1])) for i in enumerate(install)]))
+    installscreen[2].widget_list.append(urwid.Pile([urwid.Button(('inv', f'{i[0] + 1}. {i[1]}'), on_press=page_gen(i[1])) for i in enumerate(sorted(install))]))
 
     # Set widget to download page
     page_gen(name)('')
