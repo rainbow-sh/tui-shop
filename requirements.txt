@@ -2,3 +2,4 @@ urwid
 pyfiglet
 requests
 thefuzz[speedup]
+PyGithub
