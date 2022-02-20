@@ -361,7 +361,7 @@ quitscreen = urwid.Pile((
     urwid.Columns((
         urwid.Button('Yes', on_press=lambda _: (loop.stop(), quit(0))), # Stops the loop and quits
         urwid.Button('No', on_press=lambda _: change_screen('mainscreen')) # Return to home screen
-    ))
+    ), 5)
 ))
 
 # If not imported
