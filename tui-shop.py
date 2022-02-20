@@ -223,7 +223,7 @@ try: apps = {i.name.replace('.json', '').replace('_', ' '):loads(i.decoded_conte
 except GithubException: # If github token invalid
     print(f'\u001b[1m\u001b[31mPUT A VALID GITHUB TOKEN IN THE CONFIG ({FILEPATH}/config.json)\u001b[0m')
     exit(1) # Quit with error
-except (ConnectionError, ReadTimeout):
+except (ConnectionError, ReadTimeout): # If no internet connection
     print(f'\u001b[1m\u001b[31mLOW INTERNET CONNECTION\u001b[0m')
     exit(1) # Quit with error
 
@@ -387,6 +387,9 @@ if __name__=='__main__':
             try: loop.run() # Run loop
             except KeyboardInterrupt: quit(0) # Quit on ctrl+c
             except AttributeError: quit(1) # Idk why this bug happends but it just quits with error
+            except (ConnectionError, ReadTimeout): # If no internet connection
+                print(f'\u001b[1m\u001b[31mLOW INTERNET CONNECTION\u001b[0m')
+                exit(1) # Quit with error
     else: # If not root
         print('\u001b[1m\u001b[31mRUN AS ROOT\u001b[0m')
         quit(1) # Quit with error
