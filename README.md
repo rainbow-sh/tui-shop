@@ -48,7 +48,7 @@ chmod +x ./install.sh
 sudo ./install.sh
 ```
 
-After that, go into /opt/tui-shop/config.json and paste your github key.
+After that, launch the program, go into /opt/tui-shop/config.json and paste your github key.
 
 To get a github key you need to:
 
