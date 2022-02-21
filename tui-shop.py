@@ -153,6 +153,10 @@ def page_gen(name:str):
         # Github data
         downpage.widget_list.append(urwid.Columns((
             urwid.Pile((
+                urwid.Text(('bold', 'Author'), align=urwid.CENTER), # Author
+                urwid.Text(apps[name]['repo'].split('/')[0], align=urwid.CENTER)
+            )),
+            urwid.Pile((
                 urwid.Text(('bold', 'Stars'), align=urwid.CENTER), # Stars
                 urwid.Text(str(ghdata.stargazers_count), align=urwid.CENTER)
             )),
