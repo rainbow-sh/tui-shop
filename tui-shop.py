@@ -13,7 +13,7 @@ from requests.exceptions import ConnectionError, ReadTimeout # For low internet 
 
 # CONSTANT PATHS
 FILEPATH = '/opt/tui-shop'
-REPONAME = 'Gcat101/tui-shop-repo'
+REPONAME = 'rainbow-sh/tui-shop-repo'
 
 # Create opt path if it doesn't exist
 if not path.exists(FILEPATH): mkdir(FILEPATH)
@@ -339,11 +339,11 @@ aboutscreen = urwid.Pile((
         LINEBREAK,
 
         urwid.Text(('bold', 'Repo'), align=urwid.CENTER),
-        urwid.Text('https://github.com/G_cat101/tui-shop', align=urwid.CENTER),
+        urwid.Text('https://github.com/rainbow-sh/tui-shop', align=urwid.CENTER),
         LINEBREAK,
 
         urwid.Text(('bold', 'App repo'), align=urwid.CENTER),
-        urwid.Text('https://github.com/G_cat101/tui-shop-repo', align=urwid.CENTER),
+        urwid.Text('https://github.com/rainbow-sh/tui-shop-repo', align=urwid.CENTER),
         LINEBREAK,
 
         urwid.Text(('bold', 'License'), align=urwid.CENTER),
