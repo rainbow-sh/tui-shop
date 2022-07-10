@@ -346,8 +346,7 @@ aboutscreen = urwid.Pile((
         urwid.Text('https://github.com/rainbow-sh/tui-shop-repo', align=urwid.CENTER),
         LINEBREAK,
 
-        urwid.Text(('bold', 'License'), align=urwid.CENTER),
-        urwid.Text('GPL-3.0', align=urwid.CENTER),
+        urwid.Text(('bold', 'Made by rainbow.sh (https://github.com/rainbow-sh) and licensed under GPL-3.0'), align=urwid.CENTER),
         LINEBREAK,
     )) # About (self-explanatory fields)
 ))
